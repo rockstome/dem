@@ -1,7 +1,7 @@
 {
-  "name": "newman-reporter-elastic",
+  "name": "newman-reporter-es",
   "version": "1.0.0",
   "description": "Newman Reporter for Elastic",
-  "main": "src/index.js",
+  "main": "index.js",
   "author": "Tomasz Solarz"
 }
