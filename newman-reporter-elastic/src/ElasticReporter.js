@@ -27,7 +27,7 @@ class ElasticReporter {
     });
 
     this.context.client = new Client({
-      nodes: this.context.clusterendpoint, // endpoint ES
+      nodes: "localhost:9200",
       maxRetries: 5,
       requestTimeout: 60000,
       sniffOnStart: true,
