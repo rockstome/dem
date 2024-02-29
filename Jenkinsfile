@@ -9,9 +9,11 @@ pipeline {
         }
         stage('Build reporter') { 
             steps {
-                sh 'npm uninstall -g newman-reporter-elastic/newman-reporter-elastic-1.0.0.tgz' 
-                sh 'npm pack'
-                sh 'npm install -g newman-reporter-elastic/newman-reporter-elastic-1.0.0.tgz'
+                dir('newman-reporter-elastic'){
+                    sh 'npm uninstall -g newman-reporter-elastic-1.0.0.tgz' 
+                    sh 'npm pack'
+                    sh 'npm install -g newman-reporter-elastic-1.0.0.tgz'
+                }
             }
         }
     }
