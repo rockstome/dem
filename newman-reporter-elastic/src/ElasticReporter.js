@@ -125,7 +125,7 @@ class ElasticReporter {
     var data = this.context.currentItem.data;
     data.console_logs = this.context.console_logs.flat(1);
     data.exceptions = this.context.exceptions;
-    console.log(data); // czas na logowanie
+    //console.log(data); // czas na logowanie
 
     function add_document(data, indexName, client) {
       // var data = Object.entries(data).filter(([_, v]) => v != null);
