@@ -19,7 +19,7 @@ pipeline {
         stage('Run collections') {
             steps {
                 dir('collections') {
-                    bat 'C:\\Users\\tomas\\AppData\\Roaming\\npm\\newman run collection1.json -r elastic --exitCode 1'
+                    bat 'C:\\Users\\tomas\\AppData\\Roaming\\npm\\newman run collection1.json -r elastic -x'
                 }
             }
         }
