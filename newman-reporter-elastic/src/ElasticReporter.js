@@ -62,9 +62,6 @@ class ElasticReporter {
     console.log(
       `[${this.context.currentItem.index}] Running ${item.name} from collection ${this.options.collection.name}`
     );
-
-    console.log(JSON.stringify(args));
-
     var prerequest = args.item.events.find((e) => e.listen === "prerequest");
     var test = args.item.events.find((e) => e.listen === "test");
 
