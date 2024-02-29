@@ -11,6 +11,11 @@ pipeline {
                 }
             }
         }
+        stage('Install newman') {
+            steps {
+                bat 'npm install -g newman'
+            }
+        }
         stage('Run collections') {
             steps {
                 dir('collections') {
