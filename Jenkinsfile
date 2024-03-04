@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Install reporter') { 
             steps {
-                dir('newman-reporter-elastic') {
+                dir('newman-reporter-esreporter') {
                     bat 'npm uninstall -g newman-reporter-esreporter-1.0.1.tgz' 
                     bat 'npm pack'
                     bat 'npm install -g newman-reporter-esreporter-1.0.1.tgz'
