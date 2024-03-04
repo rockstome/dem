@@ -15,17 +15,16 @@ pipeline {
                     bat 'npm pack'
                     bat 'npm install -g newman newman-reporter-esreporter-1.0.3.tgz'
                     bat 'npm ls -g'
-                    bat 'newman run ..\\collection\\collection1.json -r newman-reporter-esreporter'
                 }
             }
         }
-        // stage('Run collections') {
-        //     steps {
-        //         dir('collections') {
-        //             bat 'newman run collection1.json -r newman-reporter-esreporter'
-        //         }
-        //     }
-        // }
+        stage('Run collections') {
+            steps {
+                dir('collections') {
+                    bat 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Roaming\\npm\\newman run collection1.json -r newman-reporter-esreporter'
+                }
+            }
+        }
     }
     post {  
         failure {  
