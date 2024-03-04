@@ -28,10 +28,10 @@ pipeline {
                 }
             }
         }
-        post {  
-            failure {  
-                mail body: "${env.BUILD_URL} failure", charset: 'UTF-8', from: 'foo@foomail.com', mimeType: 'text/html', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "foo@foomail.com";  
-            }  
-     } 
     }
+    post {  
+        failure {  
+            mail body: "${env.BUILD_URL} failure", charset: 'UTF-8', from: 'foo@foomail.com', mimeType: 'text/html', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "foo@foomail.com";  
+        }  
+    } 
 }
