@@ -21,7 +21,8 @@ pipeline {
         stage('Run collections') {
             steps {
                 dir('collections') {
-                    bat 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Roaming\\npm\\newman run collection1.json -r newman-reporter-esreporter'
+                    // bat 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Roaming\\npm\\newman run collection1.json -r newman-reporter-esreporter'
+                    bat 'newman run collection1.json -r newman-reporter-esreporter'
                 }
             }
         }
