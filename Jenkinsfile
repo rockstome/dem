@@ -7,20 +7,16 @@ pipeline {
         timeout(time: 5, unit: 'MINUTES') 
     }
     stages {
-        stage('Install reporter') { 
+        stage('Install newman & reporter') { 
             steps {
                 dir('newman-reporter-esreporter') {
-                    bat 'npm uninstall -g newman-reporter-esreporter-1.0.1.tgz' 
+                    bat 'npm uninstall -g newman newman-reporter-esreporter' 
                     bat 'npm pack'
-                    bat 'npm install -g newman-reporter-esreporter-1.0.1.tgz'
+                    bat 'npm install -g newman newman-reporter-esreporter-1.0.1.tgz'
                 }
             }
         }
-        stage('Install newman') {
-            steps {
-                bat 'npm install -g newman'
-            }
-        }
+
         stage('Run collections') {
             steps {
                 dir('collections') {
