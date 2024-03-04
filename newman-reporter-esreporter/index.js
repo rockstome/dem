@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = require("./ElasticSearchReporter");
+module.exports = require("./reporter");

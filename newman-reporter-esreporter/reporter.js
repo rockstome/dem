@@ -1,7 +1,7 @@
 global.signin = () => {};
 const { Client } = require("@elastic/elasticsearch");
 
-class ElasticSearchReporter {
+class Reporter {
   constructor(newmanEmitter, reporterOptions, options) {
     this.newmanEmitter = newmanEmitter;
     this.reporterOptions = reporterOptions;
@@ -164,4 +164,4 @@ class ElasticSearchReporter {
   }
 }
 
-module.exports = ElasticSearchReporter;
+module.exports = Reporter;
