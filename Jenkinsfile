@@ -21,7 +21,9 @@ pipeline {
         stage('Run collections') {
             steps {
                 dir('collections') {
+                    sh 'echo echo1'
                     bat 'newman run collection1.json -r newman-reporter-esreporter'
+                    sh 'echo echo2'
                 }
             }
         }
