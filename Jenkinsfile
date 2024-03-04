@@ -10,7 +10,6 @@ pipeline {
         stage('Install newman & reporter') { 
             steps {
                 dir('newman-reporter-esreporter') {
-                    bat 'cmd /c where newman'
                     bat 'npm uninstall -g newman newman-reporter-esreporter' 
                     bat 'npm ls -g'
                     bat 'npm pack'
@@ -22,8 +21,7 @@ pipeline {
         stage('Run collections') {
             steps {
                 dir('collections') {
-                    bat 'cmd /c where newman'
-                    bat 'cmd /c newman run collection1.json -r newman-reporter-esreporter'// -x'
+                    sh 'newman run collection1.json -r newman-reporter-esreporter'// -x'
                 }
             }
         }
