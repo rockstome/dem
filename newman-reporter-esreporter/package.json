@@ -1,0 +1,10 @@
+{
+  "name": "newman-reporter-esreporter",
+  "version": "1.0.1",
+  "description": "Newman Reporter for Elastic Search",
+  "main": "index.js",
+  "author": "Tomasz Solarz",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.12.2"
+  }
+}
