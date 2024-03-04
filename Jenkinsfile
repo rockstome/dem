@@ -10,18 +10,18 @@ pipeline {
         stage('Install newman & reporter') { 
             steps {
                 dir('newman-reporter-esreporter') {
-                    // bat 'npm uninstall -g newman newman-reporter-esreporter' 
-                    // bat 'npm ls -g'
-                    // bat 'npm pack'
-                    // bat 'npm install -g newman newman-reporter-esreporter-1.0.2.tgz'
-                    // bat 'npm ls -g'
+                    bat 'npm uninstall -g newman newman-reporter-esreporter' 
+                    bat 'npm ls -g'
+                    bat 'npm pack'
+                    bat 'npm install -g newman newman-reporter-esreporter-1.0.3.tgz'
+                    bat 'npm ls -g'
                 }
             }
         }
         stage('Run collections') {
             steps {
                 dir('collections') {
-                    bat 'C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm\\newman run collection1.json -r newman-reporter-esreporter -x'
+                    bat 'C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm\\newman run collection1.json -r newman-reporter-esreporter'// -x'
                 }
             }
         }
