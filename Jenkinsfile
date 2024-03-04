@@ -10,11 +10,11 @@ pipeline {
         stage('Install newman & reporter') { 
             steps {
                 dir('newman-reporter-esreporter') {
-                    bat 'npm uninstall -g newman newman-reporter-esreporter' 
-                    bat 'npm ls -g'
-                    bat 'npm pack'
-                    bat 'npm install -g newman newman-reporter-esreporter-1.0.2.tgz'
-                    bat 'npm ls -g'
+                    // bat 'npm uninstall -g newman newman-reporter-esreporter' 
+                    // bat 'npm ls -g'
+                    // bat 'npm pack'
+                    // bat 'npm install -g newman newman-reporter-esreporter-1.0.2.tgz'
+                    // bat 'npm ls -g'
                 }
             }
         }
