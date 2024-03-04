@@ -12,7 +12,7 @@ pipeline {
                 dir('newman-reporter-esreporter') {
                     bat 'npm uninstall -g newman newman-reporter-esreporter' 
                     bat 'npm pack'
-                    bat 'npm install -g newman newman-reporter-esreporter-1.0.1.tgz'
+                    bat 'npm install -g newman newman-reporter-esreporter-1.0.2.tgz'
                 }
             }
         }
